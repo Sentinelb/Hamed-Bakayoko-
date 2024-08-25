@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Images Superposées</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
 
+        .gallery {
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.8;
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .gallery img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .gallery img:nth-child(1) { z-index: 1; }
+        .gallery img:nth-child(2) { z-index: 2; }
+        .gallery img:nth-child(3) { z-index: 3; }
+        .gallery img:nth-child(4) { z-index: 4; }
+        .gallery img:nth-child(5) { z-index: 5; }
+        .gallery img:nth-child(6) { z-index: 6; }
+        .gallery img:nth-child(7) { z-index: 7; }
+        .gallery img:nth-child(8) { z-index: 8; }
+
+        .gallery figcaption {
+            position: relative;
+            margin-top: 20px;
+            color: #333;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <figure>
+            <img src="https://tinyurl.com/2ayar2ku" alt="Image 1">
+            <figcaption>Description de l'image 1</figcaption>
+        </figure>
+        <figure>
+            <img src="image2.jpg" alt="https://tinyurl.com/278xtudd">
+            <figcaption>Description de l'image 2</figcaption>
+        </figure>
+        <figure>
+            <img src="image3.jpg" alt="Image 3">
+            <figcaption>Description de l'image 3</figcaption>
+        </figure>
+        <figure>
+            <img src="https://tinyurl.com/278xtudd" alt="Image 4">
+            <figcaption>Description de l'image 4</figcaption>
+        </figure>
+        <figure>
+            <img src="image5.jpg" alt="Image 5">
+            <figcaption>Description de l'image 5</figcaption>
+        </figure>
+        <figure>
+            <img src="image6.jpg" alt="Image 6">
+            <figcaption>Description de l'image 6</figcaption>
+        </figure>
+        <figure>
+            <img src="image7.jpg" alt="Image 7">
+            <figcaption>Description de l'image 7</figcaption>
+        </figure>
+        <figure>
+            <img src="image8.jpg" alt="Image 8">
+            <figcaption>Description de l'image 8</figcaption>
+        </figure>
+    </div>
+</body>
+</html>
